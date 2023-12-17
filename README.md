@@ -13,10 +13,11 @@ For the Autonity challenge, you are required to send 1000 transactions in less t
    
  2. Use the `watch` command with a 1-second interval to send transactions:
 
-  ```bash
+    ```bash
 
      watch -n 1 'aut tx make --to YOUR_ADDRESS --value 1 | aut tx sign - | aut tx send -'
-  ```
+   ```
+
    Replace `yourpassword` with the actual password for your wallet and `YOUR_ADDRESS` with the target address for the transactions.
 
    **Note**: Ensure that you have the necessary permissions and have set up the Autonity environment correctly before running these commands.
