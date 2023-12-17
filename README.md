@@ -1,14 +1,23 @@
-# Autonity-Automatic-transaction
-for new autonity challenge you need to send 1000 transactions in less than 30 minutes
-the design of this challenge suggests that this task can not be done manually
-so here is the quick work around
-this method only works if you set another seperate wallet in your server and point the key to that wallet for confirming the transactions
+# Autonity-Automatic-Transaction
 
+This repository is dedicated to solving the Autonity challenge of sending 1000 transactions in less than 30 minutes. The design of this challenge indicates that manual execution is not feasible. The following method provides a workaround. Note that this method assumes you have set up another separate wallet in your server.
 
-#first need to make the password for the wallet globally accessible 
+## Quick Start
 
-export  'KEYFILEPWD'= yourpassword
+1. Make the password for the wallet globally accessible:
 
-#then use the simple watch command with 1 second interval to send transaction
+   
+    export 'KEYFILEPWD'=yourpassword
+    
+2. Use the watch command with a 1-second interval to send transactions:
 
-watch -n 1 'aut tx make --to YOUR ADDRESS  --value 1 | aut tx sign - | aut tx send -'
+   
+    watch -n 1 'aut tx make --to YOUR ADDRESS --value 1 | aut tx sign - | aut tx send -'
+    
+Replace yourpassword with the actual password and YOUR ADDRESS with the recipient's address.
+
+This method leverages the watch command to automate the transaction sending process.
+
+Note: Ensure that you have the necessary permissions and configurations set up before executing these commands.
+
+For more details on Autonity, refer to their official documentation.
